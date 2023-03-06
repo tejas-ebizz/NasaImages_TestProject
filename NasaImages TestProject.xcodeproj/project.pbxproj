@@ -26,6 +26,7 @@
 		834BB3CC29B605A600626890 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB3CB29B605A600626890 /* DetailsVC.swift */; };
 		834BB3D129B6078700626890 /* ImageDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB3CF29B6078700626890 /* ImageDetailViewCell.swift */; };
 		834BB3D229B6078700626890 /* ImageDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 834BB3D029B6078700626890 /* ImageDetailViewCell.xib */; };
+		834BB3D529B61DEA00626890 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 834BB3D429B61DEA00626890 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				412FAD910E8F1F5CE8149050 /* Pods_NasaImages_TestProjectTests.framework in Frameworks */,
+				834BB3D529B61DEA00626890 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +307,9 @@
 				833DEE5129B5FB5F003EBC47 /* PBXTargetDependency */,
 			);
 			name = "NasaImages TestProjectTests";
+			packageProductDependencies = (
+				834BB3D429B61DEA00626890 /* SnapshotTesting */,
+			);
 			productName = "NasaImages TestProjectTests";
 			productReference = 833DEE4F29B5FB5F003EBC47 /* NasaImages TestProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -361,6 +366,9 @@
 				Base,
 			);
 			mainGroup = 833DEE3029B5FB5E003EBC47;
+			packageReferences = (
+				834BB3D329B61DEA00626890 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 833DEE3A29B5FB5E003EBC47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -860,6 +868,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		834BB3D329B61DEA00626890 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		834BB3D429B61DEA00626890 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 834BB3D329B61DEA00626890 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 833DEE3129B5FB5E003EBC47 /* Project object */;
 }
