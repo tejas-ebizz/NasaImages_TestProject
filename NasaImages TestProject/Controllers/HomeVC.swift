@@ -57,6 +57,13 @@ extension HomeVC : UICollectionViewDataSource,UICollectionViewDelegate, UICollec
         let height = (width + 60)
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: DetailsVC.identifier) as! DetailsVC
+        vc.arrayPictures = arrayPictures
+        vc.selectedIndex = indexPath.row
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
